@@ -34,15 +34,6 @@ def search_view(response):
     search_input = response.POST['search_input']
     id = Video.objects.only('id').get(title = search_input).id
     gotvid = Video.objects.get(id = id) 
-    # if response.method == 'POST':
-    #     search_input = response.POST['search_input']
-    #     titles = vid.title
-    #     for i in titles:
-    #         if search_input in i:
-    #             video = Video.objects.get(title = i)
-    #             id = video.id
-    #             gotvid = Video.objects.get(id = id)  
-    #             break 
     return render(response, 'main/index.html', {'gotvid': gotvid})
             
 
