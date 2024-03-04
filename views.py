@@ -1,8 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Video
 
-# Create your views here.
-
 
 
 def index_view(response):
